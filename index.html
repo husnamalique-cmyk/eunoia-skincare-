@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Eunoia Skincare - Home</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<style>
+body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; margin:0; background:#fef6f9; color:#333; }
+header { background:#fff; padding:20px; text-align:center; font-size:28px; font-weight:bold; border-bottom:2px solid #f4b9c4; }
+
+/* Navbar */
+nav { background:#fff; padding:15px 20px; position:sticky; top:0; display:flex; justify-content:space-between; align-items:center; border-bottom:2px solid #f4b9c4; z-index:100; }
+nav div:first-child { font-weight:bold; font-size:22px; color:#ff4f86; cursor:pointer; }
+nav div:first-child:hover { transform: scale(1.05); }
+nav a { margin:0 10px; text-decoration:none; color:#333; font-weight:bold; transition:0.3s; }
+nav a:hover { color:#ff4f86; transform: scale(1.05); }
+
+/* Hero Section */
+.hero { text-align:center; padding:100px 20px; background:linear-gradient(135deg,#ffeef3,#fff0f7); border-radius:15px; margin:20px; }
+.hero h1 { font-size:48px; margin-bottom:15px; color:#ff4f86; }
+.hero p { font-size:20px; margin-bottom:30px; }
+.hero .btn-group { display:inline-flex; gap:20px; }
+.hero button { padding:15px 30px; border-radius:8px; font-size:18px; cursor:pointer; transition:0.3s; border:none; }
+.hero button:first-child { background:#ff82a9; color:#fff; }
+.hero button:first-child:hover { background:#ff4f86; transform: scale(1.05); }
+.hero button:last-child { background:#fff; color:#ff4f86; border:2px solid #ff4f86; }
+.hero button:last-child:hover { background:#ff4f86; color:#fff; transform: scale(1.05); }
+
+/* Social Media Section */
+.social-contact { text-align:center; padding:40px 20px; background:#fff; border-top:2px solid #f4b9c4; margin:40px 20px; border-radius:15px; box-shadow:0 5px 15px rgba(0,0,0,0.1); }
+.social-contact h2 { margin-bottom:10px; color:#ff4f86; }
+.social-contact p { margin-bottom:20px; }
+.social-icons a { margin:0 15px; font-size:30px; display:inline-block; color:#333; transition:0.3s; }
+.social-icons a:hover { transform: scale(1.3); }
+.social-icons a.instagram:hover { color:#E1306C; }
+.social-icons a.facebook:hover { color:#3b5998; }
+.social-icons a.email:hover { color:#ff4f86; }
+.social-icons a.whatsapp:hover { color:#25D366; }
+
+/* Footer */
+footer { text-align:center; padding:25px; background:#fff; border-top:2px solid #f4b9c4; margin-top:40px; font-size:14px; color:#555; }
+</style>
+</head>
+<body>
+
+<header>Eunoia Skincare</header>
+
+<!-- Navbar -->
+<nav>
+    <div onclick="location.href='index.html'">Eunoia Skincare</div>
+    <div>
+        <a href="index.html">Home</a>
+        <a href="products.html">Products</a>
+        <a href="cart.html">Cart</a>
+        <a href="faq.html">FAQ</a>
+    </div>
+</nav>
+
+<!-- Hero Section -->
+<section class="hero">
+    <h1>Glow Naturally with Eunoia ✨</h1>
+    <p>Discover premium skincare essentials</p>
+    <div class="btn-group">
+        <button onclick="location.href='products.html'">Shop Now</button>
+        <button onclick="location.href='faq.html'">Visit FAQ</button>
+    </div>
+</section>
+
+<!-- Social Media Section -->
+<section class="social-contact">
+    <h2>Connect With Us</h2>
+    <p>Follow us or contact us directly:</p>
+    <div class="social-icons">
+        <a href="https://www.instagram.com/eunoia" target="_blank" class="instagram"><i class="fab fa-instagram"></i></a>
+        <a href="https://www.facebook.com/eunoia" target="_blank" class="facebook"><i class="fab fa-facebook"></i></a>
+        <a href="mailto:contact@eunoia.com" class="email"><i class="fas fa-envelope"></i></a>
+        <a href="https://wa.me/60123456789" target="_blank" class="whatsapp"><i class="fab fa-whatsapp"></i></a>
+    </div>
+    <p>Or call us: +60 123 456 789</p>
+</section>
+
+<footer>&copy; 2025 Eunoia Skincare | All Rights Reserved</footer>
+
+</body>
+</html>>

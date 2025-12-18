@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>FAQ - Eunoia Skincare</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<style>
+body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; margin:0; background:#fef6f9; color:#333; }
+header { background:#fff; padding:20px; text-align:center; font-size:28px; font-weight:bold; border-bottom:2px solid #f4b9c4; }
+
+/* Navbar */
+nav { background:#fff; padding:15px 20px; position:sticky; top:0; display:flex; justify-content:space-between; align-items:center; border-bottom:2px solid #f4b9c4; z-index:100; }
+nav div:first-child { font-weight:bold; font-size:22px; color:#ff4f86; cursor:pointer; }
+nav div:first-child:hover { transform: scale(1.05); }
+nav a { margin:0 10px; text-decoration:none; color:#333; font-weight:bold; transition:0.3s; }
+nav a:hover { color:#ff4f86; transform: scale(1.05); }
+
+/* FAQ Section */
+.faq-section { max-width:900px; margin:40px auto; padding:40px 20px; background: linear-gradient(135deg,#ffeef3,#fff0f7); border-radius:15px; box-shadow:0 5px 20px rgba(0,0,0,0.1); }
+.faq-section h2 { text-align:center; margin-bottom:30px; color:#ff4f86; }
+.faq-item { background:#fff; margin-bottom:15px; border-radius:10px; box-shadow:0 3px 10px rgba(0,0,0,0.1); overflow:hidden; cursor:pointer; transition:0.3s; }
+.faq-item:hover { transform: translateY(-3px); box-shadow:0 6px 15px rgba(0,0,0,0.15); }
+.faq-question { padding:20px; font-weight:bold; font-size:18px; position:relative; }
+.faq-question::after { content: "\f107"; font-family: "Font Awesome 5 Free"; font-weight:900; position:absolute; right:20px; transition:0.3s; }
+.faq-question.active::after { transform: rotate(180deg); }
+.faq-answer { max-height:0; overflow:hidden; padding:0 20px; background:#fff0f7; transition: max-height 0.4s ease, padding 0.4s ease; }
+.faq-answer p { padding:15px 0; margin:0; line-height:1.5; }
+
+/* Footer */
+footer { text-align:center; padding:25px; background:#fff; border-top:2px solid #f4b9c4; margin-top:40px; font-size:14px; color:#555; }
+</style>
+</head>
+<body>
+
+<header>Eunoia Skincare</header>
+
+<!-- Navbar -->
+<nav>
+    <div onclick="location.href='index.html'">Eunoia Skincare</div>
+    <div>
+        <a href="index.html">Home</a>
+        <a href="products.html">Products</a>
+        <a href="cart.html">Cart</a>
+        <a href="faq.html">FAQ</a>
+    </div>
+</nav>
+
+<!-- FAQ Section -->
+<section class="faq-section">
+    <h2>Frequently Asked Questions</h2>
+
+    <div class="faq-item">
+        <div class="faq-question">Adakah produk Eunoia sesuai untuk kulit sensitif?</div>
+        <div class="faq-answer">
+            <p>Ya, semua produk diuji dermatologi dan sesuai untuk kulit sensitif. Sentiasa lakukan patch test sebelum penggunaan penuh.</p>
+        </div>
+    </div>
+
+    <div class="faq-item">
+        <div class="faq-question">Bolehkah saya guna serum dan moisturizer pada waktu yang sama?</div>
+        <div class="faq-answer">
+            <p>Ya, serum digunakan sebelum moisturizer untuk membenarkan kulit menyerap nutrien dengan optimum.</p>
+        </div>
+    </div>
+
+    <div class="faq-item">
+        <div class="faq-question">Berapa lama penghantaran mengambil masa?</div>
+        <div class="faq-answer">
+            <p>Penghantaran dalam Malaysia biasanya mengambil 2-5 hari bekerja bergantung kepada lokasi anda.</p>
+        </div>
+    </div>
+
+    <div class="faq-item">
+        <div class="faq-question">Adakah produk Eunoia diuji pada haiwan?</div>
+        <div class="faq-answer">
+            <p>Tidak. Semua produk Eunoia adalah cruelty-free dan tidak diuji pada haiwan.</p>
+        </div>
+    </div>
+
+    <div class="faq-item">
+        <div class="faq-question">Adakah produk sesuai untuk semua jenis kulit?</div>
+        <div class="faq-answer">
+            <p>Produk direka untuk semua jenis kulit, tetapi bagi kulit sangat sensitif, lakukan patch test dahulu.</p>
+        </div>
+    </div>
+</section>
+
+<footer>&copy; 2025 Eunoia Skincare | All Rights Reserved</footer>
+
+<script>
+// FAQ Accordion Functionality
+document.querySelectorAll('.faq-question').forEach(q => {
+    q.addEventListener('click', () => {
+        q.classList.toggle('active');
+        const answer = q.nextElementSibling;
+        if(answer.style.maxHeight){
+            answer.style.maxHeight = null;
+        } else {
+            answer.style.maxHeight = answer.scrollHeight + "px";
+        }
+    });
+});
+</script>
+
+</body>
+</html>

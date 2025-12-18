@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Cart - Eunoia</title>
+<style>
+    body { font-family: Arial, sans-serif; margin:0; background:#f8e9ef; color:#333; }
+    header { background:#fff; padding:20px; text-align:center; font-size:28px; font-weight:bold; border-bottom:2px solid #f4b9c4; }
+    main { padding:40px 20px; max-width:600px; margin:auto; }
+    h2 { text-align:center; margin-bottom:20px; }
+    table { width:100%; border-collapse: collapse; margin-bottom:20px; }
+    th, td { padding:10px; text-align:left; border-bottom:1px solid #ccc; }
+    .total { font-weight:bold; text-align:right; margin-bottom:20px; }
+    button { padding:10px 20px; background:#ff82a9; color:#fff; border:none; border-radius:5px; cursor:pointer; transition:0.3s; }
+    button:hover { background:#ff4f86; margin-right:10px; }
+</style>
+</head>
+<body>
+
+<header>Eunoia Skincare</header>
+
+<main>
+    <h2>Your Cart</h2>
+    <table id="cartTable">
+        <tr><th>Product</th><th>Price (RM)</th></tr>
+    </table>
+    <p class="total" id="totalPrice">Total: RM 0</p>
+    <button onclick="checkout()">Checkout</button>
+    <button onclick="goBack()">Continue Shopping</button>
+</main>
+
+<script>
+function loadCart(){
+    let cart = JSON.parse(localStorage.getItem('cart')) || [];
+    let table = document.getElementById('cartTable');
+    let total = 0;
+    cart.forEach(item=>{
+        let row = table.insertRow();
+        let cell1 = row.insertCell(0);
+        let cell2 = row.insertCell(1);
+        cell1.innerHTML = item.name;
+        cell2.innerHTML = item.price.toFixed(2);
+        total += item.price;
+    });
+    document.getElementById('totalPrice').innerHTML = "Total: RM " + total.toFixed(2);
+}
+
+function checkout(){
+    let cart = JSON.parse(localStorage.getItem('cart')) || [];
+    if(cart.length==0){ alert("Your cart is empty!"); return; }
+    alert("Thank you for your purchase!");
+    localStorage.removeItem('cart');
+    location.href='index.html';
+}
+
+function goBack(){ location.href='products.html'; }
+
+window.onload = loadCart;
+</script>
+
+</body>
+</html>
